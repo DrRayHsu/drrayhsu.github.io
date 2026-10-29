@@ -1,0 +1,5 @@
+# personal data: API responses, reports, saved purchase history
+.cache/
+out/
+*history*.html
+__pycache__/
