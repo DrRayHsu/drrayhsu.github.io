@@ -1,0 +1,28 @@
+# Hsu Advisory
+
+> Human evaluation for AI systems. Hsu Advisory designs evaluation programs, rubrics, benchmarks, red-teaming, and adjudication protocols for AI systems. Principal: Ray Hsu, Berkeley, CA.
+
+## Key pages
+
+- Home: https://drrayhsu.github.io/
+- How Hsu Advisory runs a human evaluation (worked example): https://drrayhsu.github.io/evaluation.html
+- Writing, AI for the People (Substack): https://aiforthepeople.substack.com/
+
+## Services
+
+- Evaluation program design: measurement contracts, rubrics, and benchmark suites for model behavior, character, and safety claims.
+- Human data and rater operations: recruiting and briefing expert raters, designing for disagreement instead of averaging it away, quality control that survives audit.
+- Stress tests and red-teaming: structured attempts to make AI systems fail honestly, run as sponsored pilots with university teams.
+
+## The Human Evaluation Sprint
+
+A fixed-scope evaluation of one AI task family, delivered in ten business days for a $5,000 fixed fee. The buyer provides 50 to 100 sample outputs and the task packets. The work: a written measurement contract, a rubric audit or rebuild with anchors, calibrated double rating, adjudication of every split item, and judge-versus-human agreement by rubric tier. The deliverable is a decision pack: contract, rubric with anchor set, per-item scores with agreement figures, adjudication log, and a memo stating what the results do and do not establish. Book a call: https://calendly.com/rayhsu
+
+## Proof points
+
+Five-year applied AI program; 70+ university projects run. Multi-university AI assessment pilot (Arizona State, NYU, Montclair State, Stan State) under a shared measurement contract. 78 projects posted under Hsu Advisory on Riipen. Ray Hsu: Lecturer, Department of English, California State University, Stanislaus; Instructor, Creative Writing, Simon Fraser University (2009-present); Ph.D., University of Wisconsin-Madison.
+
+## Contact
+
+Email: drrayhsu@gmail.com
+LinkedIn: https://www.linkedin.com/in/drrayhsu/
