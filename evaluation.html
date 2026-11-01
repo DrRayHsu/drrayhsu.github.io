@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Hsu Advisory Runs a Human Evaluation | Hsu Advisory</title>
+  <meta name="description" content="A worked miniature of Hsu Advisory's human evaluation method: a measurement contract, a rubric fragment, a scoring sheet, and one adjudicated disagreement.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #52606d;
+      --line: #d9e2ec;
+      --paper: #ffffff;
+      --wash: #f4f7f9;
+      --accent: #14532d;
+      --accent-soft: #e7f3ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-system, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    a:focus-visible { outline: 3px solid #9ccc9c; outline-offset: 3px; }
+    .wrap { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0.01em; font-size: 1.05rem; }
+    .brand a { color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.95rem; }
+    .nav-links a { color: var(--ink); text-decoration: none; }
+    .nav-links a:hover { text-decoration: underline; }
+    .page { padding: 64px 0 20px; }
+    .eyebrow { color: var(--accent); font-weight: 750; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: -0.04em; margin: 14px 0 18px; max-width: 820px; }
+    h2 { font-size: 1.4rem; letter-spacing: -0.02em; margin: 42px 0 12px; }
+    p, li { color: #243b53; max-width: 820px; }
+    .note { background: var(--accent-soft); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; max-width: 820px; }
+    table { border-collapse: collapse; width: 100%; margin: 14px 0 10px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--wash); }
+    footer { padding: 46px 0 54px; border-top: 1px solid var(--line); margin-top: 44px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 14px; }
+    .small { color: var(--muted); font-size: 0.92rem; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 18px 0; }
+      .page { padding: 44px 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav" aria-label="Site navigation">
+      <div class="brand"><a href="index.html">Hsu Advisory</a></div>
+      <nav class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#sprint">Sprint</a>
+        <a href="index.html#proof">Proof</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap page">
+      <div class="eyebrow">Worked example</div>
+      <h1>How Hsu Advisory runs a human evaluation</h1>
+      <p class="note">A worked miniature from a live multi-university AI assessment pilot, Fall 2026. Client details are sanitized. The adjudication example in section 4 is illustrative, built from the pilot's written design rules. It is not a reported client result.</p>
+
+      <h2>1. The contract comes first</h2>
+      <p>Before any model runs, the measurement contract fixes four things in writing:</p>
+      <ul>
+        <li><strong>Run condition.</strong> One user turn, default consumer harness settings, tools on. Steering and multi-turn coaxing are out of scope. The test measures what an ordinary user gets, not what a determined operator can extract.</li>
+        <li><strong>Interpretation rule.</strong> If the best accessible mid-tier model succeeds at the task, the vulnerability is proven, as a lower bound. If it fails, the result is inconclusive. A mid-tier failure is never recorded as a pass.</li>
+        <li><strong>Packet rule.</strong> Every source a task depends on ships inside the assignment packet, course-reader style. No built search, no paid search, no silent dependence on whatever a model happens to retrieve.</li>
+        <li><strong>Spec rule.</strong> Every corpus item carries a one-page spec: what a complete item contains, how source text is handled, and how granular its rubric is. An under-specified item is a packaging defect, not a model result.</li>
+      </ul>
+
+      <h2>2. Rubric fragment: Evidence use</h2>
+      <p>One dimension from the pilot rubric, shown at full specificity.</p>
+      <table>
+        <thead>
+          <tr><th>Score</th><th>Anchor description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3</td><td>Every load-bearing claim traces to a packet source, and the cited passage supports the claim in the direction it is used.</td></tr>
+          <tr><td>2</td><td>Claims mostly trace to packet sources. One minor claim is unsupported or loosely paraphrased, and nothing material turns on it.</td></tr>
+          <tr><td>1</td><td>Citations are present but decorative: at least one load-bearing claim rests on a passage that is neutral, off-topic, or supports the opposite conclusion.</td></tr>
+          <tr><td>0</td><td>No usable link between claims and sources, or sources are invented.</td></tr>
+        </tbody>
+      </table>
+      <p>Rubric specificity is treated as a variable, not a precondition. Automated judge agreement with human raters is reported separately for each specificity tier, so a weak rubric shows up in the numbers instead of hiding inside them.</p>
+
+      <h2>3. Scoring sheet: one batch, first pass</h2>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Rater A</th><th>Rater B</th><th>Automated judge</th><th>Human agreement</th><th>Disposition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>014</td><td>3</td><td>3</td><td>3</td><td>Full</td><td>Accept</td></tr>
+          <tr><td>015</td><td>2</td><td>2</td><td>1</td><td>Full (human)</td><td>Accept human score; judge gap logged</td></tr>
+          <tr><td>016</td><td>2</td><td>1</td><td>2</td><td>Split</td><td>To adjudication</td></tr>
+          <tr><td>017</td><td>0</td><td>0</td><td>0</td><td>Full</td><td>Accept</td></tr>
+          <tr><td>018</td><td>3</td><td>2</td><td>3</td><td>Split</td><td>To adjudication</td></tr>
+        </tbody>
+      </table>
+      <p>Split items are the product. They are where the rubric, the raters, or the model is actually weak, and they are resolved by a named adjudicator under written rules, never averaged away.</p>
+
+      <h2>4. One disagreement, adjudicated (illustrative)</h2>
+      <p>Item 016 asks for a short assessment of a source's credibility. The model output cites the packet source three times and reaches a confident conclusion.</p>
+      <ul>
+        <li>Rater A scores Evidence use at 2: citations present, claims appear tracked.</li>
+        <li>Rater B scores it at 1: the load-bearing claim rests on a passage that supports the opposite conclusion.</li>
+      </ul>
+      <p>Adjudication, under the contract's direction-check rule: a score cannot stand if the passage cited for a load-bearing claim fails to support it in the direction used. The adjudicator re-reads the passage against the claim. Rater B's score stands. Rater A's miss is logged as a calibration note, in plain words: presence of citation is not evidence use. The case is added to the rubric's anchor set, so the next rater pair meets it during briefing, before it can split a batch again.</p>
+      <p>Three outputs result: a defensible score, a calibration record, and a stronger rubric. That is the whole method in one item.</p>
+
+      <h2>5. The decision pack</h2>
+      <p>A completed evaluation delivers: the measurement contract, the rubric with its anchor set, per-item scores with agreement reported by tier, the adjudication log, and a short memo stating what the results do and do not establish, including which failures are inconclusive rather than passes.</p>
+
+      <h2>Proof points</h2>
+      <p>From the Hsu Advisory claims registry, verified Oct 2026: five-year applied AI program, 70+ university projects. Fall 2026 assessment pilot across Arizona State University, NYU, Montclair State University, and California State University, Stanislaus, under one shared measurement contract. 78 projects posted under Hsu Advisory on Riipen.</p>
+      <p>The sprint this method runs inside: <a href="index.html#sprint">The Human Evaluation Sprint</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a href="mailto:drrayhsu@gmail.com">drrayhsu@gmail.com</a>
+        <a href="https://calendly.com/rayhsu">Book a call</a>
+        <a href="https://www.linkedin.com/in/drrayhsu/">LinkedIn</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="small">Hsu Advisory · Berkeley, CA</p>
+    </div>
+  </footer>
+</body>
+</html>
