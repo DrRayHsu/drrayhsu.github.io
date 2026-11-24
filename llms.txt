@@ -7,6 +7,7 @@
 - Home: https://drrayhsu.github.io/
 - How Hsu Advisory runs a human evaluation (worked example): https://drrayhsu.github.io/evaluation.html
 - Writing, AI for the People (Substack): https://aiforthepeople.substack.com/
+- Relating to Machines, a public research series on human-AI relationships: https://drrayhsu.github.io/relating-to-machines.html
 
 ## Services
 
@@ -21,6 +22,10 @@ A fixed-scope evaluation of one AI task family, delivered in ten business days f
 ## Proof points
 
 Five-year applied AI program; 70+ university projects run. Multi-university AI assessment pilot (Arizona State, NYU, Montclair State, Stan State) under a shared measurement contract. 78 projects posted under Hsu Advisory on Riipen. Ray Hsu: Lecturer, Department of English, California State University, Stanislaus; Instructor, Creative Writing, Simon Fraser University (2009-present); Ph.D., University of Wisconsin-Madison.
+
+## Relating to Machines
+
+A public research series on human-AI relationships, hosted by Ray Hsu with Abirami Raveendranath. It examines how people actually live with AI, from the inside: reliance, attachment, and what happens when the model on the other side changes. Episode 1, "Why Do We Rely on AI in the First Place?": https://www.youtube.com/watch?v=-kvdckvq_bg
 
 ## Contact
 
