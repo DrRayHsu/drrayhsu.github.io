@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relating to Machines | A public research series on human-AI relationships</title>
+  <meta name="description" content="Relating to Machines is a public research series on human-AI relationships, hosted by Ray Hsu with Abirami Raveendranath. Episode 1: Why Do We Rely on AI in the First Place?">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Relating to Machines",
+    "description": "A public research series on human-AI relationships: how people actually live with AI, from the inside.",
+    "url": "https://drrayhsu.github.io/relating-to-machines.html",
+    "author": [
+      { "@type": "Person", "name": "Ray Hsu", "url": "https://drrayhsu.github.io/" },
+      { "@type": "Person", "name": "Abirami Raveendranath" }
+    ],
+    "sameAs": [
+      "https://www.youtube.com/watch?v=-kvdckvq_bg",
+      "https://aiforthepeople.substack.com/",
+      "https://x.com/thewayofray",
+      "https://www.linkedin.com/in/drrayhsu/",
+      "https://www.instagram.com/thewayofray"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #52606d;
+      --line: #d9e2ec;
+      --paper: #ffffff;
+      --wash: #f4f7f9;
+      --accent: #14532d;
+      --accent-soft: #e7f3ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-system, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    a:focus-visible { outline: 3px solid #9ccc9c; outline-offset: 3px; }
+    .wrap { width: min(1040px, calc(100% - 40px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0.01em; font-size: 1.05rem; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 0.95rem; }
+    .nav-links a { color: var(--ink); text-decoration: none; }
+    .nav-links a:hover { text-decoration: underline; }
+    .hero { padding: 84px 0 64px; background: linear-gradient(180deg, #ffffff 0%, var(--wash) 100%); }
+    .eyebrow { color: var(--accent); font-weight: 750; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+    h1 { font-size: clamp(2.6rem, 7vw, 5rem); line-height: 0.98; letter-spacing: -0.055em; margin: 16px 0 22px; max-width: 820px; }
+    .lead { font-size: clamp(1.18rem, 2.4vw, 1.5rem); line-height: 1.42; color: #243b53; max-width: 760px; margin: 0; }
+    .hosts { margin-top: 26px; color: var(--muted); font-weight: 650; }
+    section { padding: 58px 0; border-bottom: 1px solid var(--line); }
+    h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); letter-spacing: -0.03em; margin: 0 0 18px; }
+    p { max-width: 760px; }
+    .episode { background: var(--wash); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+    .video { position: relative; padding-top: 56.25%; border-radius: 8px; overflow: hidden; background: #000; margin: 18px 0; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 46px; padding: 0 18px; border-radius: 8px;
+      border: 1px solid var(--accent); background: var(--accent); color: white;
+      text-decoration: none; font-weight: 720;
+    }
+    .follow { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .follow a {
+      display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px;
+      border: 1px solid var(--line); border-radius: 8px; background: white;
+      color: var(--ink); text-decoration: none; font-weight: 650;
+    }
+    .follow a:hover { border-color: var(--accent); color: var(--accent); }
+    footer { padding: 34px 0 44px; color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Relating to Machines</div>
+      <nav class="nav-links">
+        <a href="#episode">Episode 1</a>
+        <a href="#about">About</a>
+        <a href="#follow">Follow</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div class="eyebrow">A public research series on human-AI relationships</div>
+        <h1>Relating to Machines</h1>
+        <p class="lead">How people actually live with AI, from the inside: reliance, attachment, and what happens when the model on the other side changes.</p>
+        <p class="hosts">Hosted by Ray Hsu with Abirami Raveendranath, presented through Sentient Futures.</p>
+      </div>
+    </div>
+
+    <section id="episode">
+      <div class="wrap">
+        <h2>Episode 1</h2>
+        <div class="episode">
+          <strong>Why Do We Rely on AI in the First Place?</strong>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/-kvdckvq_bg" title="Relating to Machines, Episode 1: Why Do We Rely on AI in the First Place?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a class="button" href="https://www.youtube.com/watch?v=-kvdckvq_bg">Watch on YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>About the series</h2>
+        <p>Relating to Machines looks at how people actually live with AI, from the inside: attachment, reliance, grief when models change, and what these relationships show us. It is drawn from public conversations and lived experience rather than lab studies alone, and it asks what the people closest to these systems can teach the rest of us about where this is going.</p>
+        <p>The series was presented at the Sentient Futures showcase in November 2026.</p>
+      </div>
+    </section>
+
+    <section id="follow">
+      <div class="wrap">
+        <h2>Follow the work</h2>
+        <div class="follow">
+          <a href="https://www.youtube.com/watch?v=-kvdckvq_bg">YouTube</a>
+          <a href="https://aiforthepeople.substack.com/">AI for the People (Substack)</a>
+          <a href="https://x.com/thewayofray">X: @thewayofray</a>
+          <a href="https://www.linkedin.com/in/drrayhsu/">LinkedIn</a>
+          <a href="https://www.instagram.com/thewayofray">Instagram: @thewayofray</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Relating to Machines is a project of <a href="https://drrayhsu.github.io/">Ray Hsu</a>.
+    </div>
+  </footer>
+</body>
+</html>
